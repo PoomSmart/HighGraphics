@@ -2,17 +2,17 @@
 
 %hook UIDevice
 
-- (int)_graphicsQuality
+- (NSInteger)_graphicsQuality
 {
 	return 0x64;
 }
 
-- (int)_keyboardGraphicsQuality
+- (NSInteger)_keyboardGraphicsQuality
 {
 	return 0x64;
 }
 
-- (int)_predictionGraphicsQuality
+- (NSInteger)_predictionGraphicsQuality
 {
 	return 0x64;
 }
@@ -23,7 +23,7 @@
 
 %hook UIDevice
 
-- (int)_graphicsQualityIncludingMediumN41:(BOOL)n41
+- (NSInteger)_graphicsQualityIncludingMediumN41:(BOOL)n41
 {
 	return 0x64;
 }
