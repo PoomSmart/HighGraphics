@@ -1,7 +1,7 @@
 Package: com.ps.highgraphics
 Name: HighGraphics
 Depends: mobilesubstrate, firmware (>= 7.0)
-Version: 1.0
+Version: 1.0.0
 Architecture: iphoneos-arm
 Description: Best UIKit graphics for older devices.
 Maintainer: PoomSmart

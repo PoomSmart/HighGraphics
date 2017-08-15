@@ -1,7 +1,6 @@
-ARCHS = armv7
-DEBUG = 0
+PACKAGE_VERSION = 1.0.4
 
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = HighGraphics
 HighGraphics_FILES = Tweak.xm

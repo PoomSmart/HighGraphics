@@ -2,19 +2,16 @@
 
 %hook UIDevice
 
-- (NSInteger)_graphicsQuality
-{
-	return 0x64;
+- (NSInteger)_graphicsQuality {
+	return 100;
 }
 
-- (NSInteger)_keyboardGraphicsQuality
-{
-	return 0x64;
+- (NSInteger)_keyboardGraphicsQuality {
+	return 100;
 }
 
-- (NSInteger)_predictionGraphicsQuality
-{
-	return 0x64;
+- (NSInteger)_predictionGraphicsQuality {
+	return 100;
 }
 
 %end
@@ -23,13 +20,23 @@
 
 %hook UIDevice
 
-- (NSInteger)_graphicsQualityIncludingMediumN41:(BOOL)n41
-{
-	return 0x64;
+- (NSInteger)_graphicsQualityIncludingMediumN41:(BOOL)n41 {
+	return 100;
 }
 
-- (NSArray *)_mediumQualityProductsIncludingN41:(BOOL)n41
-{
+- (NSInteger)sbf_homeScreenFolderGraphicsQuality {
+	return 100;
+}
+
+- (NSInteger)sbf_searchTransitionGraphicsQuality {
+	return 100;
+}
+
+- (NSInteger)sbf_dashBoardPresentationGraphicsQuality {
+	return 100;
+}
+
+- (NSArray *)_mediumQualityProductsIncludingN41:(BOOL)n41 {
 	return @[];
 }
 
@@ -37,13 +44,11 @@
 
 %hook SBPlatformController
 
-- (BOOL)isH4Device
-{
+- (BOOL)isH4Device {
 	return NO;
 }
 
-- (BOOL)isSingleCoreDevice
-{
+- (BOOL)isSingleCoreDevice {
 	return NO;
 }
 
@@ -54,7 +59,7 @@
 %ctor
 {
 	%init;
-	if ([NSBundle.mainBundle.bundleIdentifier isEqualToString:@"com.apple.springboard"]) {
+	if (IN_SPRINGBOARD) {
 		%init(SpringBoard);
 	}
 }

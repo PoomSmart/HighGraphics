@@ -1,5 +1,3 @@
 .theos
-theos
-_
 obj
-debs/*
+packages/*
