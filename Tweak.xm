@@ -42,7 +42,7 @@
     return 100;
 }
 
-- (NSInteger) sbf_homeGrabberGraphicsQuality {
+- (NSInteger)sbf_homeGrabberGraphicsQuality {
     return 100;
 }
 
@@ -54,7 +54,31 @@
     return 100;
 }
 
+- (NSInteger)sbf_homescreenBlurGraphicsQuality {
+    return 100;
+}
+
+- (NSArray *)_lowQualityDevicesForFeatherBlur {
+    return @[];
+}
+
+- (NSArray *)_lowQualityDevicesForHomeScreenBlur {
+    return @[];
+}
+
 - (NSArray *)_mediumQualityProductsIncludingN41:(BOOL)n41 {
+    return @[];
+}
+
+- (NSArray *)_mediumQualityDevicesForFeatherBlur {
+    return @[];
+}
+
+- (NSArray *)_mediumQualityDevicesForAnimatedHomeScreenBlur {
+    return @[];
+}
+
+- (NSArray *)_mediumQualityDevicesForHomeScreenBlur {
     return @[];
 }
 
