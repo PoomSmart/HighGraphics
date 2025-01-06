@@ -34,6 +34,10 @@
     return 100;
 }
 
+- (NSInteger)sbf_homeScreenFolderBackgroundGraphicsQuality {
+    return 100;
+}
+
 - (NSInteger)sbf_searchTransitionGraphicsQuality {
     return 100;
 }
